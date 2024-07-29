@@ -1,0 +1,79 @@
+@use "base" as *;
+
+.navbar-items {
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-right: 80px;
+}
+
+.navbar-items a {
+  color: $main-color;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.navbar-items a:hover,
+.navbar-item select:hover {
+  text-decoration: underline;
+}
+.navbar-item select {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.navbar-logo {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-right: auto;
+  margin-left: 80px;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  align-self: end;
+  width: 18px;
+  height: 3px;
+  margin: 5px;
+  background-color: $main-color;
+}
+.bar-middle {
+  width: 9px;
+  padding-right: 0px;
+}
+
+@media screen and (max-width: 850px) {
+  .navbar-item {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hamburger {
+    margin-right: 24px;
+  }
+  .navbar-logo {
+    margin-left: 24px;
+  }
+}
